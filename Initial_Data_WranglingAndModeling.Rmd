@@ -1,5 +1,27 @@
-## Initical data wrangling for PhD ##
-#####################################
+---
+title: "Initial Data Wrangling and Modelling"
+author: "Igor Hut"
+date: '26 april 2016 '
+output: html_document
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+```
+
+
+This document contains exploratory data analysis and initial tryouts of different ML algorithms for classification of the probationary data set for my PhD thesis.
+
+For the sake of transparency and reproducibility all the used R code will be included.
+
+## Exploratory Data Analysis
+
+Raw data set was provided by prof. Koruga and A. Dragicevic in the form of an MS Excel file `IGOR HUT TTRPSouthend2015.xlsx`, which contains tagged results obtained by OMS recording of tissue samples. 
+
+### Initial settings and data import
+
+```{R, message=FALSE, warning=FALSE, cache=T}
+
 library(readxl)
 library(ggplot2)
 library(ggthemes)
@@ -14,12 +36,11 @@ setwd("~/GitHub/PhD")
 
 initData<-read_excel("IGOR HUT TTRPSouthend2015.xlsx")
 
-initData# Checking the tbl
-
+initData # Checking the tbl
 
 useData<-initData[-(1:3)] # First three columns are not needed for initial analysis
 
-glimpse(useData)
+useData[1:10] # Checking first columns of useData
 
 # Let's make factors out of chr markings
 
@@ -56,8 +77,12 @@ useData1<-cbind(useData[1],useData1)
 useData1<-tbl_df(useData1)
 
 useData1
+```
 
-# Puting in new varables that will serve as potential features for classification 
+**Let's try puting in few new varables that will serve as potential features for classification:**
+
+```{r}
+
 
 # as.matrix has to be used to transform df to matrix for matrixStats functions
 
@@ -72,17 +97,11 @@ useDataFeatures<-tbl_df(useDataFeatures)
 # DF with just the newly calculated features
 
 dataFeat<-select(useDataFeatures, Case, Mean, Median, Sd, Max, Min)
+```
 
-# Let's plot some data and see what can be used for features 
+** Checking whether theese features make any sense:**
 
-ggplot(dataFeat, aes(Min, Max, col=Case)) +
-    geom_jitter(alpha=0.6) +
-    theme_tufte()
- 
-ggplot(dataFeat, aes(Min, Sd, col=Case)) +
-  geom_jitter(alpha=0.6) +
-  theme_tufte()   
-
+```{r}
 ## Scatterplot Matrix 
 transparentTheme(trans = .4)
 
@@ -106,14 +125,13 @@ featurePlot(x = dataFeat[, 2:6],
             layout = c(7, 1),
             auto.key = list(columns = 7))
 
-## A bit of scaling for the "Mean" and "Median" features - trying to gain some 
-## separability among groups accroding to these covariates...
+## A bit of scaling for the "Mean" and "Median" features 
 
 dataFeat2<-mutate(dataFeat,Mean2000=Mean*2000, Median200=Median*200)
 
 dataFeat2<-dataFeat2[-c(2:3)]
 
-## Let's try scatter plot matrix again
+## Let's try overlayed density plots again
 
 transparentTheme(trans = .9)
 featurePlot(x = dataFeat2[,2:6],
@@ -127,35 +145,44 @@ featurePlot(x = dataFeat2[,2:6],
             pch = "|",
             layout = c(7, 1),
             auto.key = list(columns = 7))
+```
 
+**Let's check how `min` and `max` values behave according to groups:**
 
+```{r}
+dataFeat %>% group_by(Case) %>% summarise(groupAvgMax=mean(Max), groupAvgMin=mean(Min))
 
-                                            
-# Things that ought to be done: PCA, group_by and summarise, find local maximums and minimums
+```
 
-dataFeat %>% group_by(Case) %>% summarise(groupAvgMax=mean(Max), groupAvgMin=mean(Min)) 
+## ML applications
 
+**First we will try clustering the data set into 7 clusters to check whether any meaningful clustering can be performed, based on the chosen features. Though it is obvious that these features are not adequate at all...**
+  
+```{r, message=FALSE, warning=FALSE}
 # k-means perforemed on dataFeat2 to check whether any meaningful clustering
 # can be performed based on these features
 set.seed(333)
 clusterData<-dataFeat2[-1]
 clusters<-dataFeat2$Case
 
-kMeansClusters<-kmeans(clusterData,7) #clustring into 7 categories
+kMeansClusters<-kmeans(clusterData,7) # clustring into 7 categories
 
 table(clusters,kMeansClusters$cluster) # check does it make any sense
 
 # Nope :(
+```
 
-# Let's try with data normalization and afterwards with the complete data set 
-################################################################################
+**Things to be done: clustering  with data normalization and afterwards with the complete data set, also try k-medoids and k-medians...**
 
-# We'll try RF on both useData1 and dataFeat2 to see is any classification, based on the 
-# given features, feasible at all...
 
-# Let's form the training and test sets, based on 75% and 25% of the total data (useData1),
-# respectfuly
+### Classification with Random Forests and Stochastic Gradient Boosting
 
+We'll try RF on both useData1 and dataFeat2 to see is any classification, based on the 
+given features, feasible at all...
+
+```{r}
+
+# Let's form the training and test sets, based on 75% and 25% of the total data (useData1), respectfuly
 set.seed(333)
 
 inTrain <- createDataPartition(y=useData1$Case,p=0.75, list=FALSE)
@@ -175,7 +202,7 @@ testPred <- predict(modFit, testing)
 
 confusionMatrix(testPred, testing$Case) # Za plakanje
 
-# Hajde da probamo sa dataFeat2 
+# And now with dataFeat2 
 
 # Running RF
 
@@ -185,7 +212,7 @@ modFit <- train(Case~., data=training, method="rf", prox=TRUE)
 
 modFit # Uzas
 
-# prediction on test data
+# Prediction on test data
 
 testPred <- predict(modFit, testing)
 
@@ -193,7 +220,21 @@ testPred <- predict(modFit, testing)
 
 confusionMatrix(testPred, testing$Case) # Ocaj
 
-# Ajd da probamo boosting, tj. boostin with trees - gbm
+# Let's try with boosting algh.
+
+modFit <- train(Case~., method="gbm", data=training, verbose=FALSE)
+
+# Check the model
+
+print(modFit) 
+
+# Prediction on test data
+
+testPred <- predict(modFit, testing)
+
+# Results check
+
+confusionMatrix(testPred, testing$Case) # Ocaj
 
 modFit <- train(Case~., method="gbm", data=training, verbose=FALSE)
 
@@ -201,13 +242,28 @@ modFit <- train(Case~., method="gbm", data=training, verbose=FALSE)
 
 print(modFit) # 
 
-# prediction on test data
+# Prediction on test data
 
 testPred <- predict(modFit, testing)
 
 # Results check
 
-confusionMatrix(testPred, testing$Case) # Ocaj
+confusionMatrix(testPred, testing$Case) 
+
+```
+
+**As can be seen, it is almost impossible to obtain any meaningful classification model based on the existing data.** 
+
+**Two conditions have to be met for any further development:** 
+
+1. *larger data set - conditio sine qua non* 
+
+2. *defining meaningful features (covariates) that will be used for analysis and modeling - this has to be done through consultations with prof. Koruga and Sanja.* 
+
+**Also, we can try with feature extraction directly from raw data, i.e. images.**
+
+
+
 
 
 
