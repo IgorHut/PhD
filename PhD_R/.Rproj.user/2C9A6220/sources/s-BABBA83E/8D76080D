@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1530644958575.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "381237815",
+    "id" : "8D76080D",
+    "lastKnownWriteTime" : 1530645296,
+    "last_content_update" : 1530645296499,
+    "path" : "~/Documents/PhD/Initial_Data_Wrangling.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "0,8",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

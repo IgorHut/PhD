@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1530645389431.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "914080F7",
+    "lastKnownWriteTime" : 1515906982,
+    "last_content_update" : 1515906982,
+    "path" : "~/Documents/Rad sa Branom/Saradnja_sa_Branom/Rad_sa_Branom.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "37,14",
+        "scrollLine" : "30"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

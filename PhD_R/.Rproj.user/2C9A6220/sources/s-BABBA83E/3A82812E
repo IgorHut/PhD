@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1530634781071.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "3A82812E",
+    "lastKnownWriteTime" : 1530658538,
+    "last_content_update" : 1530658782648,
+    "path" : "~/Documents/PhD/PhD_R/frbs_initial_learning.R",
+    "project_path" : "frbs_initial_learning.R",
+    "properties" : {
+        "cursorPosition" : "13,61",
+        "scrollLine" : "3",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

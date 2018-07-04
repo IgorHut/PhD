@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1530645513629.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "80E7FC91",
+    "lastKnownWriteTime" : 1530663478,
+    "last_content_update" : 1530699835135,
+    "path" : "~/Documents/PhD/PhD_R/PAP_fuzzy.R",
+    "project_path" : "PAP_fuzzy.R",
+    "properties" : {
+        "cursorPosition" : "54,0",
+        "scrollLine" : "40",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

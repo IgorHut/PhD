@@ -1,0 +1,43 @@
+]0;/home/igor/Documents/PhD/PhD_R]0;igor@igor-HP-Compaq-Elite-8300-CMT: ~/Documents/PhD/PhD_R[01;32migor@igor-HP-Compaq-Elite-8300-CMT[00m:[01;34m~/Documents/PhD/PhD_R[00m$ cd PhD_podaci/
+]0;/home/igor/Documents/PhD/PhD_R/PhD_podaci]0;igor@igor-HP-Compaq-Elite-8300-CMT: ~/Documents/PhD/PhD_R/PhD_podaci[01;32migor@igor-HP-Compaq-Elite-8300-CMT[00m:[01;34m~/Documents/PhD/PhD_R/PhD_podaci[00m$ ls
+LBC svi OMIS podaci sredjeni.xlsx  PAP svi OMIS podaci sredjeni.xlsx
+]0;/home/igor/Documents/PhD/PhD_R/PhD_podaci]0;igor@igor-HP-Compaq-Elite-8300-CMT: ~/Documents/PhD/PhD_R/PhD_podaci[01;32migor@igor-HP-Compaq-Elite-8300-CMT[00m:[01;34m~/Documents/PhD/PhD_R/PhD_podaci[00m$ pwd
+/home/igor/Documents/PhD/PhD_R/PhD_podaci
+]0;/home/igor/Documents/PhD/PhD_R/PhD_podaci]0;igor@igor-HP-Compaq-Elite-8300-CMT: ~/Documents/PhD/PhD_R/PhD_podaci[01;32migor@igor-HP-Compaq-Elite-8300-CMT[00m:[01;34m~/Documents/PhD/PhD_R/PhD_podaci[00m$ ls
+LBC svi OMIS podaci sredjeni.xlsx  PAP svi OMIS podaci sredjeni.xlsx
+]0;/home/igor/Documents/PhD/PhD_R/PhD_podaci]0;igor@igor-HP-Compaq-Elite-8300-CMT: ~/Documents/PhD/PhD_R/PhD_podaci[01;32migor@igor-HP-Compaq-Elite-8300-CMT[00m:[01;34m~/Documents/PhD/PhD_R/PhD_podaci[00m$ cd ..
+]0;/home/igor/Documents/PhD/PhD_R]0;igor@igor-HP-Compaq-Elite-8300-CMT: ~/Documents/PhD/PhD_R[01;32migor@igor-HP-Compaq-Elite-8300-CMT[00m:[01;34m~/Documents/PhD/PhD_R[00m$ cd ..
+]0;/home/igor/Documents/PhD]0;igor@igor-HP-Compaq-Elite-8300-CMT: ~/Documents/PhD[01;32migor@igor-HP-Compaq-Elite-8300-CMT[00m:[01;34m~/Documents/PhD[00m$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   Initial_Data_Wrangling.R[m
+	[31mdeleted:    PhD_R/.Rproj.user/2C9A6220/sources/s-D1D2C52E/lock_file[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mPhD_R/.RData[m
+	[31mPhD_R/.Rhistory[m
+	[31mPhD_R/.Rproj.user/2C9A6220/console06/[m
+	[31mPhD_R/.Rproj.user/2C9A6220/pcs/[m
+	[31mPhD_R/.Rproj.user/2C9A6220/persistent-state[m
+	[31mPhD_R/.Rproj.user/2C9A6220/rmd-outputs[m
+	[31mPhD_R/.Rproj.user/2C9A6220/saved_source_markers[m
+	[31mPhD_R/.Rproj.user/2C9A6220/sources/prop/[m
+	[31mPhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/[m
+	[31mPhD_R/.Rproj.user/shared/notebooks/paths[m
+	[31mPhD_R/PAP_analiza_modelovanje.R[m
+	[31mPhD_R/PAP_fuzzy.R[m
+	[31mPhD_R/PhD_podaci/[m
+	[31mPhD_R/frbs_initial_learning.R[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;/home/igor/Documents/PhD]0;igor@igor-HP-Compaq-Elite-8300-CMT: ~/Documents/PhD[01;32migor@igor-HP-Compaq-Elite-8300-CMT[00m:[01;34m~/Documents/PhD[00m$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+Did you mean this?
+	add
+]0;/home/igor/Documents/PhD]0;igor@igor-HP-Compaq-Elite-8300-CMT: ~/Documents/PhD[01;32migor@igor-HP-Compaq-Elite-8300-CMT[00m:[01;34m~/Documents/PhD[00m$ git add .
