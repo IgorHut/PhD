@@ -49,7 +49,7 @@ object_frbs_w <- frbs.learn(train_data, range_data_input,
 summary(object_frbs_w)
 
 pred <- predict(object_frbs_w, test_data)
-err <- 100 * sum(pred != class_test_data)/length(pred)
-err # 97.8022 sa num.labels = 7
+acc <- 1 - sum(pred != class_test_data)/length(pred)
+acc # 97.8022 sa num.labels = 7
 
 plotMF(object_frbs_w)
