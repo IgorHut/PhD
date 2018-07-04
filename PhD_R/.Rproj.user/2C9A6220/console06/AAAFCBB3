@@ -41,3 +41,130 @@ git: 'add.' is not a git command. See 'git --help'.
 Did you mean this?
 	add
 ]0;/home/igor/Documents/PhD]0;igor@igor-HP-Compaq-Elite-8300-CMT: ~/Documents/PhD[01;32migor@igor-HP-Compaq-Elite-8300-CMT[00m:[01;34m~/Documents/PhD[00m$ git add .
+warning: CRLF will be replaced by LF in PhD_R/.Rproj.user/2C9A6220/console06/AAAFCBB3.
+The file will have its original line endings in your working directory.
+]0;/home/igor/Documents/PhD]0;igor@igor-HP-Compaq-Elite-8300-CMT: ~/Documents/PhD[01;32migor@igor-HP-Compaq-Elite-8300-CMT[00m:[01;34m~/Documents/PhD[00m$ git as[K[Kstatus
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mmodified:   Initial_Data_Wrangling.R[m
+	[32mnew file:   PhD_R/.RData[m
+	[32mnew file:   PhD_R/.Rhistory[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/console06/AAAFCBB3[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/console06/AAAFCBB3.env[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/console06/INDEX001[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/pcs/files-pane.pper[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/pcs/source-pane.pper[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/pcs/windowlayoutstate.pper[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/pcs/workbench-pane.pper[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/persistent-state[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/rmd-outputs[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/saved_source_markers[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/sources/prop/2ED7FF08[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/sources/prop/6E252C23[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/sources/prop/72565C41[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/sources/prop/95C927E2[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/sources/prop/B3A009E3[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/sources/prop/INDEX[m
+	[32mrenamed:    PhD_R/.Rproj.user/2C9A6220/sources/s-D1D2C52E/lock_file -> PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/280AF7-contents[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/3A82812E[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/3A82812E-contents[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/80E7FC91[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/80E7FC91-contents[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/8D76080D[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/8D76080D-contents[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/914080F7[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/914080F7-contents[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/9AF3ABE[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/9AF3ABE-contents[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/F7F523C-contents[m
+	[32mnew file:   PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/lock_file[m
+	[32mnew file:   PhD_R/.Rproj.user/shared/notebooks/paths[m
+	[32mnew file:   PhD_R/PAP_analiza_modelovanje.R[m
+	[32mnew file:   PhD_R/PAP_fuzzy.R[m
+	[32mnew file:   PhD_R/PhD_podaci/.~lock.PAP_svi_OMIS_podaci_sredjeni.xlsx#[m
+	[32mnew file:   PhD_R/PhD_podaci/LBC_svi_OMIS_podaci_sredjeni.xlsx[m
+	[32mnew file:   PhD_R/PhD_podaci/PAP_svi_OMIS_podaci_sredjeni.xlsx[m
+	[32mnew file:   PhD_R/frbs_initial_learning.R[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   PhD_R/.Rproj.user/2C9A6220/console06/AAAFCBB3[m
+
+]0;/home/igor/Documents/PhD]0;igor@igor-HP-Compaq-Elite-8300-CMT: ~/Documents/PhD[01;32migor@igor-HP-Compaq-Elite-8300-CMT[00m:[01;34m~/Documents/PhD[00m$ git commit - [Km "Initial fuzzy"[K and data aad[K[Kdded"
+[master d60d6c1] Initial fuzzy and data added
+ 39 files changed, 1265 insertions(+), 1 deletion(-)
+ create mode 100644 PhD_R/.RData
+ create mode 100644 PhD_R/.Rhistory
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/console06/AAAFCBB3
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/console06/AAAFCBB3.env
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/console06/INDEX001
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/pcs/files-pane.pper
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/pcs/source-pane.pper
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/pcs/windowlayoutstate.pper
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/pcs/workbench-pane.pper
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/persistent-state
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/rmd-outputs
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/saved_source_markers
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/sources/prop/2ED7FF08
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/sources/prop/6E252C23
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/sources/prop/72565C41
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/sources/prop/95C927E2
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/sources/prop/B3A009E3
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/sources/prop/INDEX
+ rename PhD_R/.Rproj.user/2C9A6220/sources/{s-D1D2C52E/lock_file => s-BABBA83E/280AF7-contents} (100%)
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/3A82812E
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/3A82812E-contents
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/80E7FC91
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/80E7FC91-contents
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/8D76080D
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/8D76080D-contents
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/914080F7
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/914080F7-contents
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/9AF3ABE
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/9AF3ABE-contents
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/F7F523C-contents
+ create mode 100644 PhD_R/.Rproj.user/2C9A6220/sources/s-BABBA83E/lock_file
+ create mode 100644 PhD_R/.Rproj.user/shared/notebooks/paths
+ create mode 100644 PhD_R/PAP_analiza_modelovanje.R
+ create mode 100644 PhD_R/PAP_fuzzy.R
+ create mode 100644 PhD_R/PhD_podaci/.~lock.PAP_svi_OMIS_podaci_sredjeni.xlsx#
+ create mode 100644 PhD_R/PhD_podaci/LBC_svi_OMIS_podaci_sredjeni.xlsx
+ create mode 100644 PhD_R/PhD_podaci/PAP_svi_OMIS_podaci_sredjeni.xlsx
+ create mode 100644 PhD_R/frbs_initial_learning.R
+]0;/home/igor/Documents/PhD]0;igor@igor-HP-Compaq-Elite-8300-CMT: ~/Documents/PhD[01;32migor@igor-HP-Compaq-Elite-8300-CMT[00m:[01;34m~/Documents/PhD[00m$ git push origin
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+]0;/home/igor/Documents/PhD]0;igor@igor-HP-Compaq-Elite-8300-CMT: ~/Documents/PhD[01;32migor@igor-HP-Compaq-Elite-8300-CMT[00m:[01;34m~/Documents/PhD[00m$ git push origin [1@-[1@-[1@s[1@e[1@t[1@-[1@u[1@p[1@s[1@t[1@r[1@e[1@a[1@m[1@ [C[C[C[C[C[C[C m a s t e r 
+error: cannot run rpostback-askpass: No such file or directory
+Username for 'https://github.com': ai1data2
+error: cannot run rpostback-askpass: No such file or directory
+Password for 'https://ai1data2@github.com': 
+]0;/home/igor/Documents/PhD]0;igor@igor-HP-Compaq-Elite-8300-CMT: ~/Documents/PhD[01;32migor@igor-HP-Compaq-Elite-8300-CMT[00m:[01;34m~/Documents/PhD[00m$ 
